@@ -6,17 +6,26 @@ ofertas.style.fontFamily = "roboto-bold";
 ofertas.style.fontSize = "40px";
 console.log('ofertas');
 
-//Array productos Exitentes//
-let productos = [];
+//Array productos Existentes//
+let productos = [ 
+{nombre: 'vanity', colores: ['rosa', 'verde',  'negro' ], precioLista: '15000', productId:'1231'},
+{nombre: 'lotus_flower', colores: [ 'verde',  'negro' ], precioLista: '19000', productId:'1238'},
+{nombre: 'redox', colores: ['rosa', 'verde',  'azul' ], precioLista: '28000', productId:'1235'},
+{nombre: 'summertime', colores: ['rosa', 'rojo',  'negro' ], precioLista: '1900', productId:'1234'},
+{nombre: 'focus', colores: [ 'verde',  'negro' ], precioLista: '260000', productId:'1232'},
+{nombre: 'rocket', colores: ['rosa', 'verde',  'violeta' ], precioLista: '38000', productId:'1239' },
+{nombre: 'shali', colores: ['rosa', 'verde',  'negro' ], precioLista: '50000', productId:'1244'},
+{nombre: 'bubble', colores: [ 'verde',  'negro' ], precioLista: '32000',  productId:'1245'},
+{nombre: 'linger', colores: ['negro', 'amarillo',  'azul' ], precioLista: '28000', productId:'1246' }
+
+];
 
 //Array vacio para ingresar productos//
-let productosNuevos = [ ]
+let productosNuevos = [ ];
 
 //Array de objetos//
 let productosConDescuento =[
-{nombre: 'vanity', colores: ['rosa', 'verde',  'negro' ], precio_lista: '150000',},
-{nombre: 'lotus_flower', colores: [ 'verde',  'negro' ], precio_lista: '190000', },
-{nombre: 'redox', colores: ['rosa', 'verde',  'azul' ], precio_lista: '280000', }
+
 ];
 console.log('productosConDescuento');
 
