@@ -92,6 +92,8 @@ const cards = document.querySelectorAll("card");
 /*luego de que defino la variable cards que contiene la clase "card" (array)
 uso forEach para iterar sobre cada elemento dentro del array*/
 
+
+/*hover de las cards*/
 cards.forEach(card => {
     card.addEventListener('mouseover', () => {
         card.classList.add('hover');
@@ -101,3 +103,4 @@ cards.forEach(card => {
       });
 });
  
+

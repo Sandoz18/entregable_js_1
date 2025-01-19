@@ -16,8 +16,8 @@
     rel="stylesheet">
   <title>Entregable Javascript 1</title>
 </head>
-
-<body>
+<div class="container-fluid gx-0">
+  <body>
   <header>
     <nav class="navbar navbar-dark bg-dark fixed-top mt-1 pt-5">
       <div class="container-fluid">
@@ -65,7 +65,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main>    
     <section class="principal">
       <div class="marquesina fixed-top py-2 bg-light">
         <span class="marquee-item">3 CUOTAS SIN INTERÉS EN COMPRAS SUPERIORES A $350.000 Y 6 CUOTAS SIN INTERÉS EN
@@ -76,13 +76,21 @@
           COMPRAS SUPERIORES A $600.000</span>
         <span class="marquee-item">3 CUOTAS SIN INTERÉS EN COMPRAS SUPERIORES A $350.000 Y 6 CUOTAS SIN INTERÉS EN
           COMPRAS SUPERIORES A $600.000</span>
-      </div>
-      <!-------muestra h2 con javascript----->
-      <h1>marca</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="texto_principal text-center">
+      </div>  
+       <!-------muestra h2 con javascript----->     
+      <div class="banner container-fluid">       
+        <div class="row">  
+        <div class="col-12"> 
+          <div class="col bg-dark">
+            <div class="fixed-modal">
+              <div id="unModal" class="modal">
+                Modal javascript, necesito que abra que cierre que se oculte.
+                Newsletter suscripción y terminos y condiciones 
+              </div>          
+            </div>
+          </div>
+            <div class="texto_principal text-center">             
+              <h1>marca</h1>
               <h4 class="rebajas">REBAJAS<h4/>
               <div class="container d-flex
                     justify-content-center align-items-center text-center">
@@ -99,7 +107,8 @@
                 En productos Seleccionados
               </p>
               <div class="shop text-white">
-                compra ahora!
+                <!--acá algún efecto copado para el bóton-->
+                <a class="btn btn-primary btn-lg" href="#" role="button">Comprá Ahora!</a>
               </div>
             </div>
 
@@ -109,8 +118,16 @@
       </div>
 
     </section>
-
-    <section class="destacados bg-dark">
+<section class="envios">
+  <div class="container-fluid d-flex justify-content-around bg- text-white">
+    <!--acá hacer algo con js-->
+    <p>Envíos gratis</p>
+    <p>Envíos gratis</p>
+    <p>Envíos gratis</p>
+    <p>Envíos gratis</p>
+  </div>
+</section>
+    <section class="destacados">
       <h3>Nuestros Productos Destacados</h3>
       <div class="container">
 
@@ -489,5 +506,5 @@
   <script src="script.js"></script>
 
 </body>
-
+</div>
 </html>

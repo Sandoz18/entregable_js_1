@@ -163,13 +163,89 @@ Si a y b son iguales, la función devuelve 0.*/
 /*CONCATENAR ARRAYS*/
 /*join toma un único argumento opcional: el separador, que determina qué string se utiliza para separar los elementos del array en la nueva cadena resultante. Si no se proporciona un separador, los elementos se concatenarán con una coma (,). Si el separador es una cadena vacía (''), los elementos se concatenarán sin ningún espacio entre ellos.*/ 
 
-
+/*1. Uso básico con coma (default)*/
 let colores = ['Rojo', 'Verde', 'Azul'];
 let resultado = colores.join();
 console.log(resultado);  // "Rojo,Verde,Azul"
 
-
+/*1. Uso con separador de espacio*/
 nombres = ['Ana', 'Juan', 'Carlos'];
 let listaNombres = nombres.join(' ');
 console.log(listaNombres);  // "Ana Juan Carlos"
+
+
+/*1. Uso con separador de guión*/
+let elementos = ['Hidrógeno', 'Oxígeno', 'Carbono'];
+let formula = elementos.join('-');
+console.log(formula);  // "Hidrógeno-Oxígeno-Carbono"
+
+/*Uso con separador vacio*/ 
+let letras = ['J', 'a', 'v', 'a'];
+let palabraA = letras.join('');
+console.log(palabraA);  // "Java"
+
+/*Casos de Uso
+Formato de visualización: Transformar un array de datos en una forma legible para ser mostrada en interfaces de usuario o en documentos.
+
+Preparación de datos para envío: Convertir arrays a strings para ser enviados a través de peticiones de red donde solo se pueden enviar strings.
+
+Logs y depuración: Facilitar la revisión de datos en desarrollo, permitiendo ver fácilmente el contenido de arrays complejos.*/ 
+
+/*Objetos literales y su  Relación */
+//Sirven para crear un objeto y asignarle propiedades, es una forma ordenada y concisa de crear un objeto//
+
+const usuario = {nombre : "Juan",
+    apellido: " Perez",
+    edad: "32",
+};
+
+/*A diferencia de los arrays, que son colecciones indexadas de elementos, los objetos literales no mantienen un orden específico de sus elementos y no se accede a sus valores mediante índices numéricos. En los arrays, el acceso a los elementos se realiza a través de índices comenzando desde 0, mientras que en los objetos, el acceso se realiza a través de las claves definidas.*/
+
+
+// Array
+const coloress = ["rojo", "verde", "azul"];
+console.log(coloress[0]); // Accede al primer elemento: "rojo"
+
+// Objeto Literal
+const semaforo = {
+    rojo: "Detenerse",
+    verde: "Avanzar",
+    azul: "Cuidado"
+};
+console.log(semaforo.rojo); // Accede al valor de la clave 'rojo': "Detenerse"
+
+/*los arrays pueden almacenar varios tipos de datos, incluidos objetos literales. Esto es especialmente útil en aplicaciones donde se manejan colecciones de datos complejos. Los métodos de array como push, sort, y otros se pueden utilizar eficientemente en arrays que contienen objetos literales, lo que permite manipular datos de formas potentes y flexibles.*/
+
+/*Para agregar nuevos objetos a un array, se utiliza el método push.*/
+
+const usuarios = [];
+usuarios.push({ nombre: "Ana", edad: 25 });
+usuarios.push({ nombre: "Luis", edad: 30 });
+
+console.log(usuarios);
+// Resultado: [{ nombre: "Ana", edad: 25 }, { nombre: "Luis", edad: 30 }]
+
+//ordenar objetos con sort()//
+usuarios.sort((a, b) => a.edad - b.edad);
+console.log(usuarios);
+// Resultado: [{ nombre: "Ana", edad: 25 }, { nombre: "Luis", edad: 30 }]
+
+//Filtrar con filter//
+const mayoresDe25 = usuarios.filter(usuario => usuario.edad > 25);
+console.log(mayoresDe25);
+// Resultado: [{ nombre: "Luis", edad: 30 }]
+
+//buscar con find//
+
+const luis = usuarios.find(usuario => usuario.nombre === "Luis");
+console.log(luis);
+// Resultado: { nombre: "Luis", edad: 30 }
+
+//Resumen unidad//
+// Puedes añadir, modificar y eliminar propiedades de un objeto de forma dinámica.//
+persona.profesion = "Ingeniera";
+console.log(persona); // {nombre: "Ana", edad: 32, ciudad: "Madrid", profesion: "Ingeniera"}
+
+delete persona.edad;
+console.log(persona); // {nombre: "Ana", ciudad: "Madrid", profesion: "Ingeniera"}
 
